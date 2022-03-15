@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SlideCollectionViewCell" customModule="HSE_Apple" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="719"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="719"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YGM-wD-VgD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="719"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="slide1" translatesAutoresizingMaskIntoConstraints="NO" id="PRJ-rf-wHy">
+                                <rect key="frame" x="0.0" y="-269" width="322" height="1038"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HSE Apple" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdp-PF-ttU">
+                                <rect key="frame" x="16" y="66" width="167" height="38.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipiscing " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYX-NH-44l">
+                                <rect key="frame" x="26" y="147" width="270" height="43"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="2" height="0.0"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHT-Qa-hoa">
+                                <rect key="frame" x="103" y="624.5" width="114" height="34.5"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Войти">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="17"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="authorizationButtonClick:" destination="gTV-IL-0wX" eventType="touchUpInside" id="s42-BK-ZNo"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wrC-M2-TUj">
+                                <rect key="frame" x="55" y="573" width="210" height="50"/>
+                                <color key="backgroundColor" red="0.94253206249999999" green="0.56757509709999998" blue="0.3999558091" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="523-zA-faa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Зарегистрироваться">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="registrationButtonClick:" destination="gTV-IL-0wX" eventType="touchUpInside" id="3RJ-1y-UyD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="wHT-Qa-hoa" secondAttribute="trailing" constant="103" id="00X-Xg-pki"/>
+                            <constraint firstItem="PRJ-rf-wHy" firstAttribute="leading" secondItem="YGM-wD-VgD" secondAttribute="leading" id="Jft-3a-Gbr"/>
+                            <constraint firstItem="PRJ-rf-wHy" firstAttribute="top" secondItem="YGM-wD-VgD" secondAttribute="top" id="KvD-a3-NQf"/>
+                            <constraint firstItem="uYX-NH-44l" firstAttribute="leading" secondItem="YGM-wD-VgD" secondAttribute="leading" constant="26" id="OZO-0G-6vV"/>
+                            <constraint firstAttribute="trailing" secondItem="wrC-M2-TUj" secondAttribute="trailing" constant="55" id="Oea-WR-kIz"/>
+                            <constraint firstAttribute="trailing" secondItem="bdp-PF-ttU" secondAttribute="trailing" constant="137" id="TtJ-iG-jIo"/>
+                            <constraint firstItem="wHT-Qa-hoa" firstAttribute="leading" secondItem="YGM-wD-VgD" secondAttribute="leading" constant="103" id="YIu-Yw-ELD"/>
+                            <constraint firstItem="uYX-NH-44l" firstAttribute="top" secondItem="bdp-PF-ttU" secondAttribute="bottom" constant="42.5" id="b6D-wQ-8WY"/>
+                            <constraint firstAttribute="trailing" secondItem="PRJ-rf-wHy" secondAttribute="trailing" id="bZB-iZ-hYS"/>
+                            <constraint firstAttribute="trailing" secondItem="uYX-NH-44l" secondAttribute="trailing" constant="24" id="cHp-5u-cfo"/>
+                            <constraint firstItem="bdp-PF-ttU" firstAttribute="top" secondItem="YGM-wD-VgD" secondAttribute="top" constant="66" id="cun-ce-vE3"/>
+                            <constraint firstItem="bdp-PF-ttU" firstAttribute="leading" secondItem="YGM-wD-VgD" secondAttribute="leading" constant="16" id="fBu-0p-7uV"/>
+                            <constraint firstItem="wrC-M2-TUj" firstAttribute="leading" secondItem="YGM-wD-VgD" secondAttribute="leading" constant="55" id="noW-t7-tmr"/>
+                            <constraint firstAttribute="bottom" secondItem="wHT-Qa-hoa" secondAttribute="bottom" constant="60" id="q3w-SM-SWL"/>
+                            <constraint firstAttribute="bottom" secondItem="PRJ-rf-wHy" secondAttribute="bottom" id="tJN-yW-kG0"/>
+                            <constraint firstAttribute="bottom" secondItem="wrC-M2-TUj" secondAttribute="bottom" constant="96" id="uUq-rT-cyl"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="YGM-wD-VgD" secondAttribute="trailing" id="FVv-oD-s5y"/>
+                <constraint firstItem="YGM-wD-VgD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="HZc-Ny-4ld"/>
+                <constraint firstAttribute="bottom" secondItem="YGM-wD-VgD" secondAttribute="bottom" id="Wiw-iN-vER"/>
+                <constraint firstItem="YGM-wD-VgD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="y1r-no-twk"/>
+            </constraints>
+            <size key="customSize" width="320" height="719"/>
+            <connections>
+                <outlet property="authorizationButton" destination="wHT-Qa-hoa" id="0WH-EK-vmv"/>
+                <outlet property="descriptionText" destination="uYX-NH-44l" id="nCx-oM-TKo"/>
+                <outlet property="registrationButton" destination="wrC-M2-TUj" id="CjW-GV-yeu"/>
+                <outlet property="slideImage" destination="PRJ-rf-wHy" id="JcL-xJ-22K"/>
+                <outlet property="titleLabel" destination="bdp-PF-ttU" id="77h-Fa-bXh"/>
+            </connections>
+            <point key="canvasLocation" x="220.28985507246378" y="191.85267857142856"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="slide1" width="4016" height="6016"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
