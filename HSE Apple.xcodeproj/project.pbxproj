@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1859A60227E0F021005A9C6A /* CheckFieldManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1859A60127E0F021005A9C6A /* CheckFieldManager.swift */; };
 		185DEE9E27B646A300AF1D89 /* AnnouncementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185DEE9D27B646A300AF1D89 /* AnnouncementsViewController.swift */; };
 		185DEEA027B64F1400AF1D89 /* NewAnnouncementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185DEE9F27B64F1400AF1D89 /* NewAnnouncementViewController.swift */; };
 		185DEEA427B6B20800AF1D89 /* AnnouncementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185DEEA327B6B20800AF1D89 /* AnnouncementModel.swift */; };
@@ -21,13 +22,11 @@
 		18B4915327B1417A00D48CB9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B4915227B1417A00D48CB9 /* LoginViewController.swift */; };
 		18B4915F27B1482B00D48CB9 /* SlideCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B4915D27B1482B00D48CB9 /* SlideCollectionViewCell.swift */; };
 		18B4916027B1482B00D48CB9 /* SlideCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18B4915E27B1482B00D48CB9 /* SlideCollectionViewCell.xib */; };
-		18B4916227B17A5100D48CB9 /* UIViewPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B4916127B17A5100D48CB9 /* UIViewPin.swift */; };
 		18B4916427B22F8700D48CB9 /* SlideModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B4916327B22F8700D48CB9 /* SlideModel.swift */; };
 		18B4916627B238C000D48CB9 /* Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B4916527B238C000D48CB9 /* Slider.swift */; };
 		18B4916827B23C0F00D48CB9 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B4916727B23C0F00D48CB9 /* RegistrationViewController.swift */; };
 		18B4916A27B23C2B00D48CB9 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B4916927B23C2B00D48CB9 /* AuthorizationViewController.swift */; };
 		18B4916C27B23D9300D48CB9 /* ApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B4916B27B23D9300D48CB9 /* ApplicationViewController.swift */; };
-		18B4916E27B29C8300D48CB9 /* CheckField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B4916D27B29C8300D48CB9 /* CheckField.swift */; };
 		18EAF82E27B3A4C2004E0FE4 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EAF82D27B3A4C2004E0FE4 /* ChatViewController.swift */; };
 		18EAF83027B3AB48004E0FE4 /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EAF82F27B3AB48004E0FE4 /* ConversationsViewController.swift */; };
 		18EAF83727B3CCDE004E0FE4 /* ConversationViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EAF83627B3CCDE004E0FE4 /* ConversationViewCell.swift */; };
@@ -52,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		0D64795CE7C7BDE5D85BE33D /* Pods_HSE_Apple.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HSE_Apple.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1859A60127E0F021005A9C6A /* CheckFieldManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckFieldManager.swift; sourceTree = "<group>"; };
 		185DEE9D27B646A300AF1D89 /* AnnouncementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementsViewController.swift; sourceTree = "<group>"; };
 		185DEE9F27B64F1400AF1D89 /* NewAnnouncementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAnnouncementViewController.swift; sourceTree = "<group>"; };
 		185DEEA327B6B20800AF1D89 /* AnnouncementModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementModel.swift; sourceTree = "<group>"; };
@@ -68,13 +68,11 @@
 		18B4915227B1417A00D48CB9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		18B4915D27B1482B00D48CB9 /* SlideCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideCollectionViewCell.swift; sourceTree = "<group>"; };
 		18B4915E27B1482B00D48CB9 /* SlideCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideCollectionViewCell.xib; sourceTree = "<group>"; };
-		18B4916127B17A5100D48CB9 /* UIViewPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewPin.swift; path = ../../iOS/kvdemidenkoPW7/kvdemidenkoPW7/UIViewPin.swift; sourceTree = "<group>"; };
 		18B4916327B22F8700D48CB9 /* SlideModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideModel.swift; sourceTree = "<group>"; };
 		18B4916527B238C000D48CB9 /* Slider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slider.swift; sourceTree = "<group>"; };
 		18B4916727B23C0F00D48CB9 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		18B4916927B23C2B00D48CB9 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		18B4916B27B23D9300D48CB9 /* ApplicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationViewController.swift; sourceTree = "<group>"; };
-		18B4916D27B29C8300D48CB9 /* CheckField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CheckField.swift; path = ../../../../Downloads/CheckField.swift; sourceTree = "<group>"; };
 		18EAF82D27B3A4C2004E0FE4 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		18EAF82F27B3AB48004E0FE4 /* ConversationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsViewController.swift; sourceTree = "<group>"; };
 		18EAF83627B3CCDE004E0FE4 /* ConversationViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewCell.swift; sourceTree = "<group>"; };
@@ -176,7 +174,6 @@
 				18B4914427B13FB900D48CB9 /* Assets.xcassets */,
 				18B4914627B13FB900D48CB9 /* LaunchScreen.storyboard */,
 				18B4914927B13FB900D48CB9 /* Info.plist */,
-				18B4916127B17A5100D48CB9 /* UIViewPin.swift */,
 			);
 			path = "HSE Apple";
 			sourceTree = "<group>";
@@ -188,7 +185,7 @@
 				18FC08C127DA28CA00A8E73E /* Messages */,
 				185DEEA527B6B21100AF1D89 /* Announcements */,
 				18EAF83A27B5265A004E0FE4 /* Slides */,
-				18B4916D27B29C8300D48CB9 /* CheckField.swift */,
+				1859A60127E0F021005A9C6A /* CheckFieldManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -490,13 +487,12 @@
 				185DEE9E27B646A300AF1D89 /* AnnouncementsViewController.swift in Sources */,
 				18FC08E227DF9C7700A8E73E /* TaskManager.swift in Sources */,
 				18B4916A27B23C2B00D48CB9 /* AuthorizationViewController.swift in Sources */,
-				18B4916E27B29C8300D48CB9 /* CheckField.swift in Sources */,
-				18B4916227B17A5100D48CB9 /* UIViewPin.swift in Sources */,
 				18EAF83927B4D90C004E0FE4 /* NewConversationViewController.swift in Sources */,
 				18B4915F27B1482B00D48CB9 /* SlideCollectionViewCell.swift in Sources */,
 				185DEEA427B6B20800AF1D89 /* AnnouncementModel.swift in Sources */,
 				18FC08D127DD381400A8E73E /* PreviewAttachmentViewController.swift in Sources */,
 				18B4916827B23C0F00D48CB9 /* RegistrationViewController.swift in Sources */,
+				1859A60227E0F021005A9C6A /* CheckFieldManager.swift in Sources */,
 				18FC08EA27DFD53500A8E73E /* SubmitAnswerViewController.swift in Sources */,
 				18EAF83E27B5314B004E0FE4 /* ProfileViewController.swift in Sources */,
 				185DEEA827B6B2F100AF1D89 /* AnnouncementViewCell.swift in Sources */,
