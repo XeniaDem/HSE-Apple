@@ -21,8 +21,10 @@ class ChatViewController: MessagesViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .white
-        //messageInputBar.inputTextView.becomeFirstResponder()
+        view.backgroundColor = .secondarySystemBackground
+        messageInputBar.inputTextView.becomeFirstResponder()
+        navigationItem.title = "Ksenia Demidenko"
+        navigationItem.largeTitleDisplayMode = .never
 
 
         messagesCollectionView.messagesDataSource = self
@@ -30,8 +32,8 @@ class ChatViewController: MessagesViewController {
         messagesCollectionView.messagesDisplayDelegate = self
 
 
-        messages.append(Message(sender: selfSender, messageId: "1", sentDate: Date(), kind: .text("Hello, world!")))
-        messages.append(Message(sender: selfSender, messageId: "3", sentDate: Date(), kind: .text("Hello, world! Hello, world! Hello, world!")))
+        messages.append(Message(sender: selfSender, messageId: "1", sentDate: Date(), kind: .text("Hello!")))
+        messages.append(Message(sender: selfSender, messageId: "3", sentDate: Date(), kind: .text("How are you?")))
 
         messageInputBar.delegate = self
         showMessageTimestampOnSwipeLeft = true

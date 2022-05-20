@@ -18,13 +18,11 @@ class ConversationsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Чаты"
-        //navigationItem.titleView?.tintColor = .black
         navigationItem.largeTitleDisplayMode = .always
         
         setupConversationsTableView()
         configureNewConversationButton()
         
-        // Do any additional setup after loading the view.
     }
    
     private func setupConversationsTableView() {
@@ -51,7 +49,7 @@ class ConversationsViewController: UIViewController {
     @objc private func newConversationButtonClick(_ sender: Any) {
         let newConversationViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "NewConversationViewController")
         let navigationVC = UINavigationController(rootViewController: newConversationViewController)
-        
+        //navigationVC.modalPresentationStyle = .fullScreen
         self.present(navigationVC, animated: true, completion: nil)
     }
     
@@ -77,10 +75,8 @@ extension ConversationsViewController : UITableViewDelegate, UITableViewDataSour
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        //let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ConversationViewCell
+
         let vc = ChatViewController()
-        //vc.title = cell.titleLabel.text
-        //vc.navigationItem.largeTitleDisplayMode = .never
         navigationController?.pushViewController(vc, animated: true)
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

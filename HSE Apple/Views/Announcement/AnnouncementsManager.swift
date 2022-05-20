@@ -8,8 +8,6 @@
 import Foundation
 var announcements: [AnnouncementModel] = []
 
-
-   // var announcements: [AnnouncementModel] = []
 func addAnnouncement(announcement: AnnouncementModel) {
     announcements.append(announcement)
     //saveData()

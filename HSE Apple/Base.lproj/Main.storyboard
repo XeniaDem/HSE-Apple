@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -126,7 +126,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="rGH-fS-X8X" secondAttribute="trailing" constant="8" id="85r-Ls-yQO"/>
                                     <constraint firstItem="9cq-lC-5QH" firstAttribute="top" secondItem="rGH-fS-X8X" secondAttribute="bottom" constant="42" id="Cgs-HF-PTa"/>
@@ -1130,6 +1130,102 @@
             </objects>
             <point key="canvasLocation" x="-792.30769230769226" y="3304.9763033175354"/>
         </scene>
+        <!--View Answer View Controller-->
+        <scene sceneID="nx7-eg-brq">
+            <objects>
+                <viewController storyboardIdentifier="ViewAnswerViewController" id="LTF-Yo-QMg" customClass="ViewAnswerViewController" customModule="HSE_Apple" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Ep-6J-Kiq">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sbe-Pn-3Rn">
+                                <rect key="frame" x="45.666666666666657" y="324.66666666666669" width="299" height="195.00000000000006"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ссылка на работу" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kfc-t0-cdO">
+                                        <rect key="frame" x="77.000000000000014" y="30" width="149.33333333333337" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GPi-gP-1gG">
+                                        <rect key="frame" x="100" y="134" width="99" height="53"/>
+                                        <color key="backgroundColor" red="0.94253206249999999" green="0.56757509709999998" blue="0.3999558091" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="99" id="3uA-3p-OEV"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.93999999999999995" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Готово">
+                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="doneButtonClick:" destination="LTF-Yo-QMg" eventType="touchUpInside" id="N9x-Cx-Ncf"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="JrQ-uN-V5L">
+                                        <rect key="frame" x="0.0" y="87" width="279" height="0.0"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" link="YES" staticText="YES"/>
+                                        </accessibility>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="https://github.com/XeniaDem/HSE-Apple" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SOs-ow-SHo">
+                                        <rect key="frame" x="0.0" y="70" width="299" height="34"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" link="YES" notEnabled="YES"/>
+                                            <bool key="isElement" value="NO"/>
+                                        </accessibility>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="SOs-ow-SHo" firstAttribute="top" secondItem="Kfc-t0-cdO" secondAttribute="bottom" constant="19" id="Ax8-cN-pqI"/>
+                                    <constraint firstAttribute="trailing" secondItem="SOs-ow-SHo" secondAttribute="trailing" id="RfE-os-tF7"/>
+                                    <constraint firstAttribute="trailing" secondItem="JrQ-uN-V5L" secondAttribute="trailing" constant="20" symbolic="YES" id="TwQ-rp-cS2"/>
+                                    <constraint firstAttribute="bottom" secondItem="GPi-gP-1gG" secondAttribute="bottom" constant="8" id="W0S-o5-0yE"/>
+                                    <constraint firstAttribute="trailing" secondItem="GPi-gP-1gG" secondAttribute="trailing" constant="100" id="WMI-ax-09c"/>
+                                    <constraint firstItem="Kfc-t0-cdO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Sbe-Pn-3Rn" secondAttribute="leading" constant="20" symbolic="YES" id="eBJ-Rx-c2o"/>
+                                    <constraint firstItem="GPi-gP-1gG" firstAttribute="leading" secondItem="Sbe-Pn-3Rn" secondAttribute="leading" constant="100" id="l6I-57-Z99"/>
+                                    <constraint firstItem="SOs-ow-SHo" firstAttribute="leading" secondItem="Sbe-Pn-3Rn" secondAttribute="leading" id="n3I-hd-viQ"/>
+                                    <constraint firstItem="JrQ-uN-V5L" firstAttribute="top" secondItem="Kfc-t0-cdO" secondAttribute="bottom" constant="36" id="nbC-5P-Ka5"/>
+                                    <constraint firstItem="GPi-gP-1gG" firstAttribute="top" secondItem="JrQ-uN-V5L" secondAttribute="bottom" constant="47" id="nmq-t5-qKL"/>
+                                    <constraint firstAttribute="width" constant="299" id="qod-HS-W15"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kfc-t0-cdO" secondAttribute="trailing" constant="72.666666666666629" id="uCW-dL-X2E"/>
+                                    <constraint firstItem="JrQ-uN-V5L" firstAttribute="leading" secondItem="Sbe-Pn-3Rn" secondAttribute="leading" id="vda-mb-xCv"/>
+                                    <constraint firstItem="Kfc-t0-cdO" firstAttribute="top" secondItem="Sbe-Pn-3Rn" secondAttribute="top" constant="30" id="w9d-sk-0tx"/>
+                                    <constraint firstAttribute="height" constant="195" id="wll-1k-kCO"/>
+                                    <constraint firstItem="GPi-gP-1gG" firstAttribute="top" secondItem="SOs-ow-SHo" secondAttribute="bottom" constant="30" id="xZE-mo-8QA"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tsp-RJ-EoN"/>
+                        <constraints>
+                            <constraint firstItem="Sbe-Pn-3Rn" firstAttribute="centerX" secondItem="7Ep-6J-Kiq" secondAttribute="centerX" id="IRc-QS-qyx"/>
+                            <constraint firstItem="Sbe-Pn-3Rn" firstAttribute="centerY" secondItem="7Ep-6J-Kiq" secondAttribute="centerY" id="bqz-qf-YlR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="linkTextField" destination="SOs-ow-SHo" id="qaP-ta-IBj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="07h-xe-sk5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1230.7692307692307" y="3364.6919431279621"/>
+        </scene>
     </scenes>
     <resources>
         <image name="book" catalog="system" width="128" height="99"/>
@@ -1170,9 +1266,6 @@
         </systemColor>
         <systemColor name="tertiarySystemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="tertiarySystemGroupedBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

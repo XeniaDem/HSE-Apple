@@ -8,8 +8,6 @@
 import Foundation
 var tasks: [TaskModel] = []
 
-
-   // var announcements: [AnnouncementModel] = []
 func addTask(task: TaskModel) {
     tasks.append(task)
     //saveData()

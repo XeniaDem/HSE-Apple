@@ -1,18 +1,17 @@
 //
-//  AnnouncementViewCell.swift
+//  AnswerViewCell.swift
 //  HSE Apple
 //
-//  Created by Ксения Демиденко on 11.02.2022.
+//  Created by Ксения Демиденко on 20.05.2022.
 //
 
 import UIKit
-class AnnouncementViewCell: UITableViewCell {
+class AnswerViewCell: UITableViewCell {
     
-    public var announcementModel = AnnouncementModel()
 
     let titleLabel: UILabel = {
         let title = UILabel()
-        title.font = UIFont.systemFont(ofSize: 20, weight: .heavy)
+        title.font = UIFont.systemFont(ofSize: 17, weight: .heavy)
         title.textAlignment = .center
         //title.textColor = .black
         title.lineBreakMode = .byClipping
@@ -22,15 +21,16 @@ class AnnouncementViewCell: UITableViewCell {
     let unreadMarkImage: UIImageView = {
         let image = UIImageView()
         image.image = .init(systemName: "circle.fill")
+        //image.tintColor = .red
         image.translatesAutoresizingMaskIntoConstraints = false
         return image
     }()
 
     let descriptionLabel: UILabel = {
         let description = UILabel()
-        
         description.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
         description.textAlignment = .left
+        //description.textColor = .black
         description.numberOfLines = 3
         description.lineBreakMode = .byTruncatingTail
         description.translatesAutoresizingMaskIntoConstraints = false
@@ -40,16 +40,10 @@ class AnnouncementViewCell: UITableViewCell {
         let data = UILabel()
         data.font = UIFont.systemFont(ofSize: 12, weight: .medium)
         data.textAlignment = .right
+        //data.textColor = .black
         data.lineBreakMode = .byTruncatingTail
         data.translatesAutoresizingMaskIntoConstraints = false
         return data
-        
-    }()
-    let groupsLabel: UILabel = {
-        let groups = UILabel()
-        groups.font = UIFont.systemFont(ofSize: 12, weight: .bold)
-        groups.translatesAutoresizingMaskIntoConstraints = false
-        return groups
         
     }()
 
@@ -76,30 +70,27 @@ class AnnouncementViewCell: UITableViewCell {
     func setupCell() {
         backgroundColor = .secondarySystemBackground
         layer.cornerRadius = 10
-        titleLabel.text = announcementModel.title
-        descriptionLabel.text = announcementModel.text 
-        dataLabel.text = announcementModel.date?.formatted(.dateTime).description
-        groupsLabel.text = announcementModel.groups
-
+        titleLabel.text = "Ксения Демиденко"
+        descriptionLabel.text = "Ссылка на работу"
+        dataLabel.text = Date().formatted(.dateTime).description
+        
         addSubview(titleLabel)
         addSubview(unreadMarkImage)
         addSubview(descriptionLabel)
         addSubview(dataLabel)
-        addSubview(groupsLabel)
         
         titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
         titleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 35).isActive = true
-        titleLabel.widthAnchor.constraint(equalToConstant: 180).isActive = true
+        titleLabel.widthAnchor.constraint(equalToConstant: 270).isActive = true
         titleLabel.textAlignment = .left
         unreadMarkImage.topAnchor.constraint(equalTo: topAnchor, constant: 12).isActive = true
         unreadMarkImage.leftAnchor.constraint(equalTo: leftAnchor, constant: 10).isActive = true
         
-        descriptionLabel.topAnchor.constraint(equalTo: bottomAnchor, constant: -50).isActive = true
-        descriptionLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 5).isActive = true
+        descriptionLabel.topAnchor.constraint(equalTo: bottomAnchor, constant: -30).isActive = true
+        descriptionLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 35).isActive = true
         descriptionLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -5).isActive = true
         dataLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
         dataLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -5).isActive = true
-        groupsLabel.rightAnchor.constraint(equalTo: dataLabel.leftAnchor, constant: -10).isActive = true
-        groupsLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
     }
 }
+

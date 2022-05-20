@@ -37,10 +37,6 @@ class AuthorizationViewController: UIViewController {
     @IBAction func authorizationButtonClick(_ sender: Any) {
         if checkField.validField(emailView, emailTextField),
            checkField.validField(passwordView, passwordTextField) {
-                //let alert = UIAlertController(title: "Успешно!", message: "Вход выполнен!", preferredStyle: .alert)
-                //let okButton = UIAlertAction(title: "OK", style: .default) {_ in self.loginVCDelegate.closeVC()}
-                //alert.addAction(okButton)
-                //self.present(alert, animated: true, completion: nil)
 
                 let applicationViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "ApplicationViewController")
                 let navigationVC = UINavigationController(rootViewController: applicationViewController)

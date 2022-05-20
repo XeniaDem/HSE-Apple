@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1810471728379C06007F369A /* AnswersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1810471628379C06007F369A /* AnswersViewController.swift */; };
+		1810471A28379C89007F369A /* AnswerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1810471928379C89007F369A /* AnswerViewCell.swift */; };
+		1810471C28379E66007F369A /* ViewAnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1810471B28379E66007F369A /* ViewAnswerViewController.swift */; };
+		1810471E2837BD2F007F369A /* UserViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1810471D2837BD2F007F369A /* UserViewCell.swift */; };
 		1859A60227E0F021005A9C6A /* CheckFieldManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1859A60127E0F021005A9C6A /* CheckFieldManager.swift */; };
 		185DEE9E27B646A300AF1D89 /* AnnouncementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185DEE9D27B646A300AF1D89 /* AnnouncementsViewController.swift */; };
 		185DEEA027B64F1400AF1D89 /* NewAnnouncementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185DEE9F27B64F1400AF1D89 /* NewAnnouncementViewController.swift */; };
@@ -51,6 +55,10 @@
 
 /* Begin PBXFileReference section */
 		0D64795CE7C7BDE5D85BE33D /* Pods_HSE_Apple.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HSE_Apple.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1810471628379C06007F369A /* AnswersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersViewController.swift; sourceTree = "<group>"; };
+		1810471928379C89007F369A /* AnswerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewCell.swift; sourceTree = "<group>"; };
+		1810471B28379E66007F369A /* ViewAnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAnswerViewController.swift; sourceTree = "<group>"; };
+		1810471D2837BD2F007F369A /* UserViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewCell.swift; sourceTree = "<group>"; };
 		1859A60127E0F021005A9C6A /* CheckFieldManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckFieldManager.swift; sourceTree = "<group>"; };
 		185DEE9D27B646A300AF1D89 /* AnnouncementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementsViewController.swift; sourceTree = "<group>"; };
 		185DEE9F27B64F1400AF1D89 /* NewAnnouncementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAnnouncementViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +122,24 @@
 				0D64795CE7C7BDE5D85BE33D /* Pods_HSE_Apple.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1810471528379BEE007F369A /* Answers */ = {
+			isa = PBXGroup;
+			children = (
+				18FC08E927DFD53500A8E73E /* SubmitAnswerViewController.swift */,
+				1810471628379C06007F369A /* AnswersViewController.swift */,
+				1810471B28379E66007F369A /* ViewAnswerViewController.swift */,
+			);
+			path = Answers;
+			sourceTree = "<group>";
+		};
+		1810471828379C75007F369A /* Answer */ = {
+			isa = PBXGroup;
+			children = (
+				1810471928379C89007F369A /* AnswerViewCell.swift */,
+			);
+			path = Answer;
 			sourceTree = "<group>";
 		};
 		185DEE9C27B6468100AF1D89 /* Announcements */ = {
@@ -193,6 +219,7 @@
 		18B4915027B1402B00D48CB9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1810471828379C75007F369A /* Answer */,
 				18FC08DE27DF942200A8E73E /* Task */,
 				18FC08D527DE6E2000A8E73E /* Request */,
 				18FC08C627DB933100A8E73E /* Settings */,
@@ -248,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				18EAF83627B3CCDE004E0FE4 /* ConversationViewCell.swift */,
+				1810471D2837BD2F007F369A /* UserViewCell.swift */,
 			);
 			path = Conversation;
 			sourceTree = "<group>";
@@ -332,10 +360,10 @@
 		18FC08D827DF935500A8E73E /* Tasks */ = {
 			isa = PBXGroup;
 			children = (
+				1810471528379BEE007F369A /* Answers */,
 				18FC08D927DF937100A8E73E /* TasksViewController.swift */,
 				18FC08E327DFA1D800A8E73E /* NewTaskViewConrtoller.swift */,
 				18FC08E527DFB07500A8E73E /* PreviewTaskViewController.swift */,
-				18FC08E927DFD53500A8E73E /* SubmitAnswerViewController.swift */,
 			);
 			path = Tasks;
 			sourceTree = "<group>";
@@ -483,6 +511,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				185DEEAC27B7BDB600AF1D89 /* PreviewAnnouncementViewController.swift in Sources */,
+				1810471C28379E66007F369A /* ViewAnswerViewController.swift in Sources */,
 				18FC08D727DE6E3600A8E73E /* RequestViewCell.swift in Sources */,
 				185DEE9E27B646A300AF1D89 /* AnnouncementsViewController.swift in Sources */,
 				18FC08E227DF9C7700A8E73E /* TaskManager.swift in Sources */,
@@ -494,6 +523,8 @@
 				18B4916827B23C0F00D48CB9 /* RegistrationViewController.swift in Sources */,
 				1859A60227E0F021005A9C6A /* CheckFieldManager.swift in Sources */,
 				18FC08EA27DFD53500A8E73E /* SubmitAnswerViewController.swift in Sources */,
+				1810471728379C06007F369A /* AnswersViewController.swift in Sources */,
+				1810471A28379C89007F369A /* AnswerViewCell.swift in Sources */,
 				18EAF83E27B5314B004E0FE4 /* ProfileViewController.swift in Sources */,
 				185DEEA827B6B2F100AF1D89 /* AnnouncementViewCell.swift in Sources */,
 				18B4915327B1417A00D48CB9 /* LoginViewController.swift in Sources */,
@@ -512,6 +543,7 @@
 				18EAF83727B3CCDE004E0FE4 /* ConversationViewCell.swift in Sources */,
 				18FC08C327DA28E300A8E73E /* MessageModel.swift in Sources */,
 				18EAF82E27B3A4C2004E0FE4 /* ChatViewController.swift in Sources */,
+				1810471E2837BD2F007F369A /* UserViewCell.swift in Sources */,
 				18FC08E027DF943100A8E73E /* TaskViewCell.swift in Sources */,
 				18B4916627B238C000D48CB9 /* Slider.swift in Sources */,
 				185DEEA027B64F1400AF1D89 /* NewAnnouncementViewController.swift in Sources */,

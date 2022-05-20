@@ -120,13 +120,11 @@ class NewTaskViewController: UIViewController, UITextViewDelegate {
         attachmentsTableView.register(AttachmentViewCell.self, forCellReuseIdentifier: "AttachmentViewCell")
         attachmentsTableView.dataSource = self
         attachmentsTableView.delegate = self
-        //tableView.backgroundColor = UIColor.clear
         attachmentsTableView.rowHeight = 70
         attachmentsTableView.showsVerticalScrollIndicator = true
       
         attachmentsTableView.layer.cornerRadius = 20
         attachmentsTableView.layer.masksToBounds = true
-        //tableView.backgroundColor = .darkGray
         
     }
     private func handleStartDeleting(_ id: Int) {
@@ -140,9 +138,7 @@ extension NewTaskViewController : UIDocumentPickerDelegate {
         attachments.append(urls[0])
         attachmentsTableView.isHidden = false
         attachmentsTableView.reloadData()
-        //print(urls[0])
-       // print([urls[0].lastPathComponent])
-        
+    
         
     }
 }

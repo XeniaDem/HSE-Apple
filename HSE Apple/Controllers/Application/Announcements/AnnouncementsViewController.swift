@@ -40,7 +40,6 @@ class AnnouncementsViewController: UIViewController {
         if (announcements.isEmpty) {
             filterButton.isEnabled = false
         }
-        //filterButton.showsMenuAsPrimaryAction = true
     }
     
     
@@ -75,7 +74,6 @@ class AnnouncementsViewController: UIViewController {
         tableView.register(AnnouncementViewCell.self, forCellReuseIdentifier: "AnnouncementViewCell")
         tableView.dataSource = self
         tableView.delegate = self
-        //tableView.backgroundColor = UIColor.clear
         tableView.rowHeight = 100
         tableView.showsVerticalScrollIndicator = true
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -96,7 +94,6 @@ class AnnouncementsViewController: UIViewController {
         vc.isBeingEdited = true
         vc.configurePreviewAnnouncementView(announcement: announcements[id])
         vc.titleTextField.isUserInteractionEnabled = true
-        //vc.announcementTextView.isUserInteractionEnabled = true
         vc.announcementTextView.isEditable = true
         vc.groupsButton.isUserInteractionEnabled = true
         vc.announcementId = id

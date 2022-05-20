@@ -7,19 +7,11 @@
 
 import UIKit
 class RequestViewCell: UITableViewCell {
-    
-    //public var announcementModel = AnnouncementModel()
-
-//    let image: UIImageView = {
-//        let image = UIImageView()
-//        return image
-//    }()
 
     let titleLabel: UILabel = {
         let title = UILabel()
         title.font = UIFont.systemFont(ofSize: 17, weight: .heavy)
         title.textAlignment = .center
-        //title.textColor = .black
         title.lineBreakMode = .byClipping
         title.translatesAutoresizingMaskIntoConstraints = false
         return title
@@ -27,7 +19,6 @@ class RequestViewCell: UITableViewCell {
     let unreadMarkImage: UIImageView = {
         let image = UIImageView()
         image.image = .init(systemName: "circle.fill")
-        //image.tintColor = .red
         image.translatesAutoresizingMaskIntoConstraints = false
         return image
     }()
@@ -36,7 +27,6 @@ class RequestViewCell: UITableViewCell {
         let description = UILabel()
         description.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
         description.textAlignment = .left
-        //description.textColor = .black
         description.numberOfLines = 3
         description.lineBreakMode = .byTruncatingTail
         description.translatesAutoresizingMaskIntoConstraints = false
@@ -46,7 +36,6 @@ class RequestViewCell: UITableViewCell {
         let data = UILabel()
         data.font = UIFont.systemFont(ofSize: 12, weight: .medium)
         data.textAlignment = .right
-        //data.textColor = .black
         data.lineBreakMode = .byTruncatingTail
         data.translatesAutoresizingMaskIntoConstraints = false
         return data
@@ -64,12 +53,6 @@ class RequestViewCell: UITableViewCell {
            fatalError("init(coder:) has not been implemented")
        }
 
-//    private func loadImage() -> UIImage? {
-//        guard let data = try? Data(contentsOf: (articleModel.img?.url)!) else {
-//            return nil
-//        }
-//        return UIImage(data: data)
-//    }
     func makeRead() {
         unreadMarkImage.removeFromSuperview()
         titleLabel.font = .systemFont(ofSize: 20, weight: .semibold)
@@ -80,18 +63,12 @@ class RequestViewCell: UITableViewCell {
     }
     
     func setupCell() {
-        //backgroundColor = UIColor.clear
         backgroundColor = .secondarySystemBackground
         layer.cornerRadius = 10
-        //layer.borderWidth = 5
-        //layoutSubviews()
-        //self.layer.borderColor = .init(red: 255.0/255.0, green: 71.0/255.0, blue: 87.0/255.0, alpha: 1.0)
-        //self.layer.borderColor = .init(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
         titleLabel.text = "kvdemidenko@edu.hse.ru"
         descriptionLabel.text = "Запрос на регистрацию"
         dataLabel.text = Date().formatted(.dateTime).description
         
-        //backgroundView = image
         addSubview(titleLabel)
         addSubview(unreadMarkImage)
         addSubview(descriptionLabel)

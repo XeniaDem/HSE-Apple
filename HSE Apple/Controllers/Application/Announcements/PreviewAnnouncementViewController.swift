@@ -21,11 +21,9 @@ class PreviewAnnouncementViewController: UIViewController, UITextViewDelegate {
         let textView = UITextView()
         
         textView.backgroundColor = .tertiarySystemBackground
-        //textView.isUserInteractionEnabled = false
         textView.isEditable = false
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.backgroundColor = .tertiarySystemBackground
-        //textView.textColor = .black
         textView.font = .systemFont(ofSize: 15, weight: .regular)
         return textView
     }()
@@ -35,8 +33,7 @@ class PreviewAnnouncementViewController: UIViewController, UITextViewDelegate {
         textField.isUserInteractionEnabled = false
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.font = .systemFont(ofSize: 21, weight: .semibold)
-        //textField.textColor = .black
-        //textField.backgroundColor = .white
+
         return textField
     }()
     let groupsButton: UIButton = {
@@ -58,8 +55,8 @@ class PreviewAnnouncementViewController: UIViewController, UITextViewDelegate {
     
     let textFieldToolBar: UIToolbar = {
         let toolBar = UIToolbar()
-        let addPhotoButton = UIBarButtonItem(image: .init(systemName: "photo"), style: .plain, target: self, action: #selector(addPhotoButtonClick))
-        let addFileButton = UIBarButtonItem(image: .init(systemName: "paperclip"), style: .plain, target: self, action: #selector(addFileButtonClick))
+        let addPhotoButton = UIBarButtonItem(image: .init(systemName: "photo"), style: .plain, target: PreviewAnnouncementViewController.self, action: #selector(addPhotoButtonClick))
+        let addFileButton = UIBarButtonItem(image: .init(systemName: "paperclip"), style: .plain, target: PreviewAnnouncementViewController.self, action: #selector(addFileButtonClick))
         toolBar.items = [addPhotoButton, addFileButton]
         toolBar.sizeToFit()
         return toolBar
@@ -79,7 +76,6 @@ class PreviewAnnouncementViewController: UIViewController, UITextViewDelegate {
         navigationItem.largeTitleDisplayMode = .never
         announcementTextView.delegate = self
         
-//        view.addGestureRecognizer(press)
         let press = UITapGestureRecognizer(target: self,
                                            action: #selector(keyboardPressedOutside))
         if (isBeingEdited) {
@@ -90,14 +86,11 @@ class PreviewAnnouncementViewController: UIViewController, UITextViewDelegate {
     override func viewDidAppear(_ animated: Bool) {
         navigationController?.hidesBarsOnSwipe = false
         navigationController?.navigationBar.isHidden = false
-        //navigationController?.navigationBar.
 
     }
     
     @objc func keyboardPressedOutside() {
-    
         self.announcementTextView.endEditing(true)
-        //view.removeGestureRecognizer(press)
     }
     
     private func configureNavigationBar() {
@@ -111,8 +104,6 @@ class PreviewAnnouncementViewController: UIViewController, UITextViewDelegate {
             navigationItem.title = "Просмотр"
             textFieldToolBar.isHidden = true
         }
-       // navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
-        //navigationController?.navigationBar.barTintColor = .white
         
     }
     private func configureAnnouncementsTextView() {
@@ -289,10 +280,6 @@ extension PreviewAnnouncementViewController : UIDocumentPickerDelegate {
         attachments?.append(urls[0])
         attachmentsTableView.isHidden = false
         attachmentsTableView.reloadData()
-        //print(urls[0])
-        //print([urls[0].lastPathComponent])
-        
-        
     }
 }
 

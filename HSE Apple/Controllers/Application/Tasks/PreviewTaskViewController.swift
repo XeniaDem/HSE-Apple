@@ -17,11 +17,9 @@ class PreviewTaskViewController: UIViewController, UITextViewDelegate {
     let taskTextView: UITextView = {
         let textView = UITextView()
         textView.backgroundColor = .tertiarySystemBackground
-        //textView.isUserInteractionEnabled = false
         textView.isEditable = false
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.backgroundColor = .tertiarySystemBackground
-        //textView.textColor = .black
         textView.font = .systemFont(ofSize: 15, weight: .regular)
         return textView
     }()
@@ -32,8 +30,6 @@ class PreviewTaskViewController: UIViewController, UITextViewDelegate {
         
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.font = .systemFont(ofSize: 21, weight: .semibold)
-        //textField.textColor = .black
-        //textField.backgroundColor = .white
         return textField
     }()
     let groupsButton: UIButton = {
@@ -55,8 +51,8 @@ class PreviewTaskViewController: UIViewController, UITextViewDelegate {
     
     let textFieldToolBar: UIToolbar = {
         let toolBar = UIToolbar()
-        let addPhotoButton = UIBarButtonItem(image: .init(systemName: "photo"), style: .plain, target: self, action: #selector(addPhotoButtonClick))
-        let addFileButton = UIBarButtonItem(image: .init(systemName: "paperclip"), style: .plain, target: self, action: #selector(addFileButtonClick))
+        let addPhotoButton = UIBarButtonItem(image: .init(systemName: "photo"), style: .plain, target: PreviewTaskViewController.self, action: #selector(addPhotoButtonClick))
+        let addFileButton = UIBarButtonItem(image: .init(systemName: "paperclip"), style: .plain, target: PreviewTaskViewController.self, action: #selector(addFileButtonClick))
         toolBar.items = [addPhotoButton, addFileButton]
         toolBar.sizeToFit()
         return toolBar
@@ -108,9 +104,7 @@ class PreviewTaskViewController: UIViewController, UITextViewDelegate {
     }
     
     @objc func keyboardPressedOutside() {
-    
         self.taskTextView.endEditing(true)
-        //view.removeGestureRecognizer(press)
     }
     private func configureFilterButton() {
         let filterButton = UIBarButtonItem(image: .init(systemName: "ellipsis"), style: .plain, target: self, action: nil)
@@ -121,10 +115,16 @@ class PreviewTaskViewController: UIViewController, UITextViewDelegate {
             navigationVC.modalPresentationStyle = .popover
             self.present(navigationVC, animated: true, completion: nil)
         }
-        let menu = UIMenu(title: "Действия", options: .displayInline, children: [submitResult])
+        let viewResults = UIAction(title: "Просмотреть ответы") { (action) in
+            let vc = AnswersViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+            vc.navigationItem.title = "Ответы на задание"
+            
+            
+        }
+        let menu = UIMenu(title: "Действия", options: .displayInline, children: [submitResult, viewResults])
         filterButton.menu = menu
         navigationItem.rightBarButtonItem = filterButton
-        //filterButton.showsMenuAsPrimaryAction = true
     }
     
     private func configureNavigationBar() {
@@ -327,9 +327,6 @@ extension PreviewTaskViewController : UIDocumentPickerDelegate {
         attachments?.append(urls[0])
         attachmentsTableView.isHidden = false
         attachmentsTableView.reloadData()
-        //print(urls[0])
-        //print([urls[0].lastPathComponent])
-        
         
     }
 }

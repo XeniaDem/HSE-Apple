@@ -1,12 +1,13 @@
 //
-//  ConversationViewCell.swift
+//  UserViewCell.swift
 //  HSE Apple
 //
-//  Created by Ксения Демиденко on 09.02.2022.
+//  Created by Ксения Демиденко on 20.05.2022.
 //
 
+import Foundation
 import UIKit
-class ConversationViewCell: UITableViewCell {
+class UserViewCell: UITableViewCell {
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
@@ -24,7 +25,7 @@ class ConversationViewCell: UITableViewCell {
     
     let titleLabel: UILabel = {
         let title = UILabel()
-        title.font = UIFont.systemFont(ofSize: 20, weight: .heavy)
+        title.font = UIFont.systemFont(ofSize: 18, weight: .bold)
         title.textAlignment = .center
         title.lineBreakMode = .byClipping
         title.translatesAutoresizingMaskIntoConstraints = false
@@ -46,8 +47,7 @@ class ConversationViewCell: UITableViewCell {
         layer.cornerRadius = 10
         
         titleLabel.text = "Ksenia Demidenko"
-        descriptionLabel.text = "How are you?"
-
+        
         addSubview(titleLabel)
         addSubview(descriptionLabel)
         

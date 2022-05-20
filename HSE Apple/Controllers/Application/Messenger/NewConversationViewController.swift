@@ -17,7 +17,7 @@ class NewConversationViewController: UIViewController {
     
     private let foundUsersTableView: UITableView = {
         let table = UITableView()
-        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        table.register(UITableViewCell.self, forCellReuseIdentifier: "UserViewCell")
        // table.isHidden = true
         return table
     }()
@@ -26,28 +26,34 @@ class NewConversationViewController: UIViewController {
         let label = UILabel()
         label.text = "Нет результатов"
         label.textAlignment = .center
-        label.textColor = .white
+        label.textColor = .black
         label.font = .systemFont(ofSize: 21, weight: .medium)
         label.isHidden = true;
         return label
     }()
+    
+    private let newGroupChatButton: UIBarButtonItem = {
+        let button = UIBarButtonItem(title: "Групповой чат", style: .plain, target: NewTaskViewController.self, action: #selector(newGroupChatButtonClick))
+        
+        button.tintColor = .systemBlue
+
+        return button
+    }()
+   
      
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
         searchBar.becomeFirstResponder()
-        
-        searchBar.tintColor = .white
-        let textFieldInsideSearchBar = searchBar.value(forKey: "searchField") as? UITextField
-        textFieldInsideSearchBar?.textColor = .white
 
         navigationController?.navigationBar.topItem?.titleView = searchBar
         let cancelButton = UIBarButtonItem(title: "Отмена", style: .plain, target: self, action: #selector(dismissSelf))
-        cancelButton.tintColor = .white
         navigationItem.rightBarButtonItem = cancelButton
-        view.addSubview(foundUsersTableView)
+        
         fetchUsers()
-        //setupTableView()
+        setupTableView()
+        setupNewGroupChatButton()
+        
         
     }
     @objc private func dismissSelf() {
@@ -57,12 +63,21 @@ class NewConversationViewController: UIViewController {
         foundUsersTableView.isHidden = false;
     }
     private func setupTableView() {
-        //conversationsTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        foundUsersTableView.register(ConversationViewCell.self, forCellReuseIdentifier: "cell")
+        foundUsersTableView.register(UserViewCell.self, forCellReuseIdentifier: "UserViewCell")
         foundUsersTableView.delegate = self
         foundUsersTableView.dataSource = self
         foundUsersTableView.frame = view.bounds
-        foundUsersTableView.backgroundColor = .init(red: 21.0/255.0, green: 22.0/255.0, blue: 43.0/255.0, alpha: 1.0)
+        foundUsersTableView.rowHeight = 60
+        foundUsersTableView.backgroundColor = .secondarySystemBackground
+        view.addSubview(foundUsersTableView)
+    }
+    
+    private func setupNewGroupChatButton() {
+        navigationItem.rightBarButtonItem = newGroupChatButton
+    }
+    
+    @objc private func newGroupChatButtonClick() {
+        
     }
     
 
@@ -74,12 +89,11 @@ extension NewConversationViewController: UISearchBarDelegate {
 }
 extension NewConversationViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ConversationViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "UserViewCell", for: indexPath) as! UserViewCell
 
-        cell.textLabel?.text = "Ksenia"
-        cell.backgroundColor = .clear
-        cell.textLabel?.font = .systemFont(ofSize: 24, weight: .bold)
-        cell.textLabel?.textColor = .white
+        cell.setupCell()
+    
+        cell.textLabel?.textColor = .black
         return cell
     }
 
@@ -90,6 +104,6 @@ extension NewConversationViewController : UITableViewDelegate, UITableViewDataSo
         tableView.deselectRow(at: indexPath, animated: true)
         let vc = ChatViewController()
         vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true, completion: nil)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -16,10 +16,9 @@ class RequestsViewController: UIViewController {
         navigationItem.title = "Запросы"
         navigationItem.largeTitleDisplayMode = .never
         setupRequestsTableView()
-        //configureNewAnnouncementButton()
-        //configureFilterButton()
         
     }
+    
     
     
     
@@ -40,45 +39,19 @@ class RequestsViewController: UIViewController {
         tableView.register(RequestViewCell.self, forCellReuseIdentifier: "RequestViewCell")
         tableView.dataSource = self
         tableView.delegate = self
-        //tableView.backgroundColor = UIColor.clear
         tableView.rowHeight = 70
         tableView.showsVerticalScrollIndicator = true
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.layer.cornerRadius = 20
         tableView.layer.masksToBounds = true
-        //tableView.backgroundColor = .darkGray
         self.view.addSubview(tableView)
     }
-    
-//    private func handleStartEditing(_ id: Int) {
-//        let vc = PreviewAnnouncementViewController()
-//        vc.isBeingEdited = true
-//        vc.configurePreviewAnnouncementView(announcement: announcements[id])
-//        vc.titleTextField.isUserInteractionEnabled = true
-//        //vc.announcementTextView.isUserInteractionEnabled = true
-//        vc.announcementTextView.isEditable = true
-//        vc.groupsButton.isUserInteractionEnabled = true
-//        vc.announcementId = id
-//        navigationController?.pushViewController(vc, animated: true)
-//    }
-//
-//    private func handleStartDeleting(_ id: Int) {
-//        removeAnnouncement(at: id)
-//        tableView.reloadData()
-//    }
-//    private func handleMarkAsUnread(_ id: Int) {
-//        announcements[id].isRead = false
-//        tableView.reloadData()
-//    }
+
 }
 extension RequestsViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "RequestViewCell", for: indexPath) as! RequestViewCell
         cell.setupCell()
-//        if cell.announcementModel.isRead == true {
-//            cell.makeRead()
-//        }
-//
         cell.layer.masksToBounds = true
         return cell
     }
@@ -87,19 +60,11 @@ extension RequestsViewController : UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-//        let cell = tableView.cellForRow(at: indexPath) as! AnnouncementViewCell
-//        cell.makeRead()
-//        announcements[indexPath.row].isRead = true
-//        let vc = PreviewAnnouncementViewController()
-//        vc.isBeingEdited = false
-//        vc.configurePreviewAnnouncementView(announcement: announcements[indexPath.row])
-//        navigationController?.pushViewController(vc, animated: true)
     }
     func tableView(_ tableView: UITableView,
                    leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteAction = UIContextualAction(style: .destructive,
                                        title: "Удалить") { [weak self] (action, view, completionHandler) in
-           // self?.handleStartDeleting(indexPath.row)
                                         completionHandler(true)
         }
         deleteAction.backgroundColor = .systemRed
@@ -111,7 +76,6 @@ extension RequestsViewController : UITableViewDelegate, UITableViewDataSource {
                        trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let unreadAction = UIContextualAction(style: .normal,
                                        title: "Пометить как непрочитанное") { [weak self] (action, view, completionHandler) in
-            //self?.handleMarkAsUnread(indexPath.row)
                                         completionHandler(true)
         }
         unreadAction.backgroundColor = .systemOrange

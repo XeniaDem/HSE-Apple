@@ -26,7 +26,6 @@ class SettingsViewCell: UITableViewCell {
         let title = UILabel()
         title.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         title.textAlignment = .center
-        //title.textColor = .black
         title.lineBreakMode = .byClipping
         title.translatesAutoresizingMaskIntoConstraints = false
         return title

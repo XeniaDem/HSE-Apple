@@ -17,7 +17,6 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         super.viewDidLoad()
 
         navigationItem.title = "Профиль"
-        //navigationItem.titleView?.tintColor = .white
         navigationItem.largeTitleDisplayMode = .always
         
         imagePicker.delegate = self
@@ -93,13 +92,7 @@ extension ProfileViewController : UITableViewDelegate, UITableViewDataSource {
         if (indexPath.row == 2) {
             dismiss(animated: true, completion: nil)
         }
-//        let cell = tableView.cellForRow(at: indexPath) as! AnnouncementViewCell
-//        cell.makeRead()
-//        announcements[indexPath.row].isRead = true
-//        let vc = PreviewAnnouncementViewController()
-//        vc.isBeingEdited = false
-//        vc.configurePreviewAnnouncementView(announcement: announcements[indexPath.row])
-//        navigationController?.pushViewController(vc, animated: true)
+        
     }
     
 }

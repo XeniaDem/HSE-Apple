@@ -15,7 +15,6 @@ class TaskViewCell: UITableViewCell {
         let title = UILabel()
         title.font = UIFont.systemFont(ofSize: 20, weight: .heavy)
         title.textAlignment = .center
-        //title.textColor = .black
         title.lineBreakMode = .byClipping
         title.translatesAutoresizingMaskIntoConstraints = false
         return title
@@ -23,7 +22,6 @@ class TaskViewCell: UITableViewCell {
     let unreadMarkImage: UIImageView = {
         let image = UIImageView()
         image.image = .init(systemName: "circle.fill")
-        //image.tintColor = .red
         image.translatesAutoresizingMaskIntoConstraints = false
         return image
     }()
@@ -32,7 +30,6 @@ class TaskViewCell: UITableViewCell {
         let description = UILabel()
         description.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
         description.textAlignment = .left
-        //description.textColor = .black
         description.numberOfLines = 3
         description.lineBreakMode = .byTruncatingTail
         description.translatesAutoresizingMaskIntoConstraints = false
@@ -42,7 +39,6 @@ class TaskViewCell: UITableViewCell {
         let data = UILabel()
         data.font = UIFont.systemFont(ofSize: 12, weight: .medium)
         data.textAlignment = .right
-        //data.textColor = .black
         data.lineBreakMode = .byTruncatingTail
         data.translatesAutoresizingMaskIntoConstraints = false
         return data
@@ -74,7 +70,6 @@ class TaskViewCell: UITableViewCell {
     let groupsLabel: UILabel = {
         let groups = UILabel()
         groups.font = UIFont.systemFont(ofSize: 12, weight: .bold)
-        //groups.textColor = .black
         groups.translatesAutoresizingMaskIntoConstraints = false
         return groups
         
@@ -109,7 +104,6 @@ class TaskViewCell: UITableViewCell {
         deadlineDateLabel.text = taskModel.dateOfDeadline?.formatted(.dateTime).description
         groupsLabel.text = taskModel.groups
         
-        //backgroundView = image
         addSubview(titleLabel)
         addSubview(unreadMarkImage)
         addSubview(descriptionLabel)

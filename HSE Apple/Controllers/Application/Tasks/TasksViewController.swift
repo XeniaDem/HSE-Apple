@@ -18,8 +18,6 @@ class TasksViewController: UIViewController {
         
         configureNewTaskButton()
         setupTasksTableView()
-     
-        
         
     }
     private func configureNewTaskButton() {
