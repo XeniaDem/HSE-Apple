@@ -7,9 +7,6 @@
 
 import Foundation
 struct AnnouncementModel {
-
-    
-
     var title: String?
     var text: String?
     var date: Date?

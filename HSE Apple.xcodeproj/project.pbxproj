@@ -155,6 +155,7 @@
 		185DEEA527B6B21100AF1D89 /* Announcements */ = {
 			isa = PBXGroup;
 			children = (
+				185DEEA927B6B52500AF1D89 /* AnnouncementsManager.swift */,
 				185DEEA327B6B20800AF1D89 /* AnnouncementModel.swift */,
 			);
 			path = Announcements;
@@ -165,7 +166,6 @@
 			children = (
 				18FC08CB27DCED8C00A8E73E /* Attachment */,
 				185DEEA727B6B2F100AF1D89 /* AnnouncementViewCell.swift */,
-				185DEEA927B6B52500AF1D89 /* AnnouncementsManager.swift */,
 			);
 			path = Announcement;
 			sourceTree = "<group>";
@@ -371,6 +371,7 @@
 		18FC08DB27DF93A700A8E73E /* Tasks */ = {
 			isa = PBXGroup;
 			children = (
+				18FC08E127DF9C7700A8E73E /* TaskManager.swift */,
 				18FC08DC27DF93B700A8E73E /* TaskModel.swift */,
 			);
 			path = Tasks;
@@ -380,7 +381,6 @@
 			isa = PBXGroup;
 			children = (
 				18FC08DF27DF943100A8E73E /* TaskViewCell.swift */,
-				18FC08E127DF9C7700A8E73E /* TaskManager.swift */,
 			);
 			path = Task;
 			sourceTree = "<group>";

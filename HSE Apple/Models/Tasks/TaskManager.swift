@@ -12,7 +12,7 @@ func addTask(task: TaskModel) {
     tasks.append(task)
     //saveData()
 }
-    //удаление ученика
+    //удаление задания
 func removeTask(at index: Int) {
     tasks.remove(at: index)
 

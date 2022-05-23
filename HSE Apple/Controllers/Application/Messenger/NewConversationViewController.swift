@@ -33,7 +33,7 @@ class NewConversationViewController: UIViewController {
     }()
     
     private let newGroupChatButton: UIBarButtonItem = {
-        let button = UIBarButtonItem(title: "Групповой чат", style: .plain, target: NewTaskViewController.self, action: #selector(newGroupChatButtonClick))
+        let button = UIBarButtonItem(title: "Групповой чат", style: .plain, target: NewConversationViewController.self, action: #selector(dismissSelf))
         
         button.tintColor = .systemBlue
 
@@ -47,9 +47,9 @@ class NewConversationViewController: UIViewController {
         searchBar.becomeFirstResponder()
 
         navigationController?.navigationBar.topItem?.titleView = searchBar
-        let cancelButton = UIBarButtonItem(title: "Отмена", style: .plain, target: self, action: #selector(dismissSelf))
-        navigationItem.rightBarButtonItem = cancelButton
-        
+//        let cancelButton = UIBarButtonItem(title: "Отмена", style: .plain, target: self, action: #selector(dismissSelf))
+//        //navigationItem.rightBarButtonItem = cancelButton
+//
         fetchUsers()
         setupTableView()
         setupNewGroupChatButton()
@@ -77,6 +77,7 @@ class NewConversationViewController: UIViewController {
     }
     
     @objc private func newGroupChatButtonClick() {
+        dismissSelf()
         
     }
     
